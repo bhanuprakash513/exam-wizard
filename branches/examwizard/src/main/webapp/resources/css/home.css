@@ -1,0 +1,93 @@
+input#term {
+border: 5px solid rgb(197, 193, 193);
+-webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+-moz-box-shadow: inset 0 0 8px rgba(0,0,0,0.1), 0 0 16px rgba(0,0,0,0.1);
+box-shadow: inset 0 0 8px rgba(56, 54, 54, 0.1), 0 0 16px rgba(0,0,0,0.1);
+padding: 15px;
+background: rgba(211, 196, 196, 0.5);
+width: 40%;
+font-size: large;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+font-weight: bold;
+font-style: italic;
+}
+
+input#search_btn {
+width: 120px;
+height: 50px;
+font-size: 18pt;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+font-weight: bold;
+margin-left: 5%;
+}
+
+form#searchForm {
+margin-left: 27%;
+margin-top: 12%;
+}
+
+.howitwork {
+width: 100%;
+height: 300px;
+float: left;
+margin-top: 43px;
+}
+
+.create_a_quiz {
+width: 30%;
+float: left;
+height: 259px;
+background: #EEEEEE;
+}
+
+.share_a_quiz {
+width: 30%;
+float: left;
+height: 259px;
+background: #EEEEEE;
+margin-left: 5%;
+}
+
+
+.analyis_result {
+width: 30%;
+float: right;
+height: 259px;
+background: #EEEEEE;
+}
+.circle {
+width: 50px;
+height: 50px;
+border-radius: 28px;
+font-size: 1.9em;
+color: #000;
+line-height: 48px;
+font-weight: bold;
+text-align: center;
+background: #A7A7A7;
+margin-top: -27px;
+margin-bottom: 8px;
+margin-left: 45%;
+}
+
+h4.heading_howtowork {
+font-size: 19pt;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+font-weight: bold;
+text-align: center;
+}
+
+div.Qdesc-pad {
+font-size: 14pt;
+font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+line-height: 1.5;
+}
+
+
+
+div#howitworks {
+font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+font-size: 24pt;
+font-weight: bold;
+margin-bottom: 5%;
+}

@@ -1,0 +1,36 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.0.3.xsd">
+
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/user*" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/quiz*" access="hasRole('ROLE_USER')" /> 
+		<intercept-url pattern="/quiz/**" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/profile*" access="hasRole('ROLE_USER')" /> 
+		<intercept-url pattern="/profile/**" access="hasRole('ROLE_USER')" /> 		 
+		<intercept-url pattern="/admin*" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/admin/**" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/loginsuccess" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+		<form-login login-page="/login" default-target-url="/"
+			authentication-failure-url="/loginfailed" />
+		<logout logout-success-url="/" />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		    <password-encoder hash="md5"/>
+			<jdbc-user-service data-source-ref="dataSource"
+				
+				users-by-username-query="
+					select userid as username ,Password as password, status as enabled 
+					from user where userid=?" 
+				
+				authorities-by-username-query="select u.userid as username, u.role as authority from user u where u.userid=?" 
+			/>
+		</authentication-provider>
+	</authentication-manager>
+
+</beans:beans>
